@@ -31,7 +31,7 @@ jobs:
     - name: Run packaging script
       run: |
         mkdir -p dist/plugins
-        node pack-plugins.js
+        node dist/pack-plugins.js
 
     - name: Commit and push
       working-directory: dist

@@ -4,10 +4,19 @@
       "name": "右键菜单清理",
       "description": "多功能、可配置的右键菜单清理工具",
       "lang": "zh",
+      "version": "0.0.2",
+      "author": "MicroBlock",
+      "path": "/plugins/右键菜单清理-v0.0.2.js",
+      "local_path": "右键菜单清理.js"
+    },
+    {
+      "name": "复制文件路径 Pro",
+      "description": "复制文件路径，文件名，拓展名，多个文件路径...",
+      "lang": "zh",
       "version": "0.0.1",
       "author": "MicroBlock",
-      "path": "/plugins/右键菜单清理-v0.0.1.js",
-      "local_path": "右键菜单清理.js"
+      "path": "/plugins/复制文件路径-Pro-v0.0.1.js",
+      "local_path": "复制文件路径 Pro.js"
     },
     {
       "name": "Windows 11 Icon Pack",

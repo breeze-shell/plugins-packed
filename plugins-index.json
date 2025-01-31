@@ -1,0 +1,12 @@
+{
+  "plugins": [
+    {
+      "name": "测试插件",
+      "description": "测试插件市场用插件，会添加一个 “Test Menu”",
+      "lang": "zh",
+      "version": "0.0.1",
+      "author": "MicroBlock",
+      "path": "/plugins/测试插件-v0.0.1.js"
+    }
+  ]
+}

@@ -6,7 +6,8 @@
       "lang": "zh",
       "version": "0.0.1",
       "author": "MicroBlock",
-      "path": "/plugins/测试插件-v0.0.1.js"
+      "path": "/plugins/测试插件-v0.0.1.js",
+      "local_path": "测试插件.js"
     }
   ]
 }

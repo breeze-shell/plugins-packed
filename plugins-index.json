@@ -1,13 +1,13 @@
 {
   "plugins": [
     {
-      "name": "测试插件",
-      "description": "测试插件市场用插件，会添加一个 “Test Menu”",
+      "name": "右键菜单清理",
+      "description": "多功能、可配置的右键菜单清理工具",
       "lang": "zh",
       "version": "0.0.1",
       "author": "MicroBlock",
-      "path": "/plugins/测试插件-v0.0.1.js",
-      "local_path": "测试插件.js"
+      "path": "/plugins/右键菜单清理-v0.0.1.js",
+      "local_path": "右键菜单清理.js"
     },
     {
       "name": "Windows 11 Icon Pack",

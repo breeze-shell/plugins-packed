@@ -75,7 +75,8 @@ function processPlugins() {
           lang: metadata.lang || 'zh',
           version: metadata.version,
           author: metadata.author || '',
-          path: `/plugins/${newFilename}`
+          path: `/plugins/${newFilename}`,
+          local_path: metadata.name + '.js'
         });
       });
 

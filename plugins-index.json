@@ -1,6 +1,15 @@
 {
   "plugins": [
     {
+      "name": "MenuInspector",
+      "description": "(开发工具) 显示当前右键菜单相关信息",
+      "lang": "zh",
+      "version": "0.0.1",
+      "author": "MicroBlock",
+      "path": "/plugins/MenuInspector-v0.0.1.js",
+      "local_path": "MenuInspector.js"
+    },
+    {
       "name": "右键菜单清理",
       "description": "多功能、可配置的右键菜单清理工具",
       "lang": "zh",
@@ -27,5 +36,10 @@
       "path": "/plugins/Windows-11-Icon-Pack-v0.0.1.js",
       "local_path": "Windows 11 Icon Pack.js"
     }
-  ]
+  ],
+  "shell": {
+    "version": "v0.0.10",
+    "path": "/shell-v0.0.10.dll",
+    "changelog": ""
+  }
 }

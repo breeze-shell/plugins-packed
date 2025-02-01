@@ -38,8 +38,8 @@
     }
   ],
   "shell": {
-    "version": "v0.0.10",
-    "path": "/shell-v0.0.10.dll",
-    "changelog": ""
+    "version": "v0.0.11",
+    "path": "/shell-v0.0.11.dll",
+    "changelog": "test changelog"
   }
 }

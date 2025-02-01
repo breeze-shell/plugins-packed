@@ -131,7 +131,7 @@ async function processShellDll() {
     console.log('Extracting windows-build.zip...');
     execSync(`unzip -o "${zipPath}" -d "${SHELL_DLL_DIR}"`);
 
-    const dllPath = path.join(SHELL_DLL_DIR, 'shell.dll');
+    const dllPath = path.join(SHELL_DLL_DIR, 'x64/release/shell.dll');
     const newDllPath = path.join(__dirname, `shell-${release.tag_name}.dll`);
     fs.renameSync(dllPath, newDllPath);
 

@@ -65,7 +65,7 @@ function downloadFile(url, dest) {
 }
 
 async function fetchLatestRelease() {
-  const repoUrl = 'https://api.github.com/repos/std-microblock/b-shell/releases/latest';
+  const repoUrl = 'https://api.github.com/repos/std-microblock/breeze-shell/releases/latest';
   return new Promise((resolve, reject) => {
     https.get(repoUrl, { headers: { 'User-Agent': 'Node.js' } }, res => {
       let data = '';

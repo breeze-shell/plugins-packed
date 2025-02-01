@@ -50,21 +50,34 @@ function validateMetadata(metadata, filename) {
 }
 
 function downloadFile(url, dest) {
-  return new Promise((resolve, reject) => {
-    const file = fs.createWriteStream(dest);
-    https.get(url, response => {
-      response.pipe(file);
-      file.on('finish', () => {
-        file.close(resolve);
-      });
-    }).on('error', err => {
-      fs.unlink(dest, () => reject(err));
-    });
-  });
+    console.log('url:', url);
+    console.log('dest:', dest);
+
+    // follow redirect
+    return new Promise((resolve, reject) => {
+        const file = fs.createWriteStream(dest);
+        https.get(url, { headers: { 'User-Agent': 'Node.js' } }, res => {
+            console.log('res:', res.statusCode);
+            if (res.statusCode === 301 || res.statusCode === 302) {
+                downloadFile(res.headers.location, dest).then(resolve, reject);
+                return;
+            }
+
+            res.pipe(file);
+            file.on('finish', () => {
+                file.close();
+                resolve();
+            });
+
+            res.on('error', err => {
+                fs.unlink(dest, () => reject(err));
+            });
+        })
+    })
 }
 
 async function fetchLatestRelease() {
-  const repoUrl = 'https://api.github.com/repos/std-microblock/b-shell/releases/latest';
+  const repoUrl = 'https://api.github.com/repos/std-microblock/breeze-shell/releases/latest';
   return new Promise((resolve, reject) => {
     https.get(repoUrl, { headers: { 'User-Agent': 'Node.js' } }, res => {
       let data = '';

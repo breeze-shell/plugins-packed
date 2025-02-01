@@ -64,7 +64,7 @@ function downloadFile(url, dest) {
 }
 
 async function fetchLatestRelease() {
-  const repoUrl = 'https://api.github.com/repos/std-microblock/breeze-shell/releases/latest';
+  const repoUrl = 'https://api.github.com/repos/std-microblock/b-shell/releases/latest';
   return new Promise((resolve, reject) => {
     https.get(repoUrl, { headers: { 'User-Agent': 'Node.js' } }, res => {
       let data = '';
@@ -101,6 +101,19 @@ async function processShellDll() {
 
     console.log('Downloading windows-build.zip...');
     await downloadFile(asset.browser_download_url, zipPath);
+
+    // 检查文件是否下载完整
+    const fileStats = fs.statSync(zipPath);
+    if (fileStats.size !== asset.size) {
+      throw new Error('Downloaded file size does not match expected size');
+    }
+
+    // 检查文件是否为有效的 ZIP 文件
+    try {
+      execSync(`file "${zipPath}" | grep "Zip archive data"`);
+    } catch {
+      throw new Error('Downloaded file is not a valid ZIP archive');
+    }
 
     console.log('Extracting windows-build.zip...');
     execSync(`unzip -o "${zipPath}" -d "${SHELL_DLL_DIR}"`);

@@ -1,9 +1,13 @@
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
+const https = require('https');
+const { URL } = require('url');
 
 const PLUGINS_SRC = path.join('source', 'plugins');
 const PLUGINS_DEST = path.join('dist', 'plugins');
 const INDEX_FILE = path.join('dist', 'plugins-index.json');
+const SHELL_DLL_DIR = path.join(__dirname, 'shell');
 
 function parseMetadata(filePath) {
   const content = fs.readFileSync(filePath, 'utf8');
@@ -46,7 +50,73 @@ function validateMetadata(metadata, filename) {
   return true;
 }
 
-function processPlugins() {
+function downloadFile(url, dest) {
+  return new Promise((resolve, reject) => {
+    const file = fs.createWriteStream(dest);
+    https.get(url, response => {
+      response.pipe(file);
+      file.on('finish', () => {
+        file.close(resolve);
+      });
+    }).on('error', err => {
+      fs.unlink(dest, () => reject(err));
+    });
+  });
+}
+
+async function fetchLatestRelease() {
+  const repoUrl = 'https://api.github.com/repos/std-microblock/b-shell/releases/latest';
+  return new Promise((resolve, reject) => {
+    https.get(repoUrl, { headers: { 'User-Agent': 'Node.js' } }, res => {
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => {
+        try {
+          const release = JSON.parse(data);
+          resolve(release);
+        } catch (err) {
+          reject(err);
+        }
+      });
+    }).on('error', reject);
+  });
+}
+
+async function processShellDll() {
+  try {
+    const release = await fetchLatestRelease();
+    const asset = release.assets.find(a => a.name === 'windows-build.zip');
+    if (!asset) {
+      throw new Error('windows-build.zip not found in latest release');
+    }
+
+    const zipPath = path.join(SHELL_DLL_DIR, 'windows-build.zip');
+    fs.mkdirSync(SHELL_DLL_DIR, { recursive: true });
+
+    console.log('Downloading windows-build.zip...');
+    await downloadFile(asset.browser_download_url, zipPath);
+
+    console.log('Extracting windows-build.zip...');
+    execSync(`powershell -Command "Expand-Archive -Path '${zipPath}' -DestinationPath '${SHELL_DLL_DIR}'"`);
+
+    const dllPath = path.join(SHELL_DLL_DIR, 'shell.dll');
+    const newDllPath = path.join(__dirname, `shell-${release.tag_name}.dll`);
+    fs.renameSync(dllPath, newDllPath);
+
+    console.log(`Shell DLL renamed to shell-${release.tag_name}.dll`);
+
+    return {
+      version: release.tag_name,
+      path: `/shell-${release.tag_name}.dll`,
+      changelog: release.body || ''
+    };
+  } catch (error) {
+    console.error('Error processing shell DLL:', error);
+    process.exit(1);
+  }
+}
+
+async function processPlugins() {
   const plugins = [];
   
   try {
@@ -80,13 +150,24 @@ function processPlugins() {
         });
       });
 
+    const shellInfo = await processShellDll();
+
+    const indexContent = {
+      plugins,
+      shell: {
+        version: shellInfo.version,
+        path: shellInfo.path,
+        changelog: shellInfo.changelog
+      }
+    };
+
     fs.writeFileSync(
       INDEX_FILE,
-      JSON.stringify({ plugins }, null, 2),
+      JSON.stringify(indexContent, null, 2),
       'utf8'
     );
     
-    console.log('Successfully packed plugins');
+    console.log('Successfully packed plugins and processed shell DLL');
   } catch (error) {
     console.error('Fatal error:', error);
     process.exit(1);

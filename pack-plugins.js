@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 const https = require('https');
-const { URL } = require('url');
 
 const PLUGINS_SRC = path.join('source', 'plugins');
 const PLUGINS_DEST = path.join('dist', 'plugins');
@@ -73,6 +72,9 @@ async function fetchLatestRelease() {
       res.on('end', () => {
         try {
           const release = JSON.parse(data);
+          if (!release.assets) {
+            throw new Error('No assets found in the latest release');
+          }
           resolve(release);
         } catch (err) {
           reject(err);
@@ -85,6 +87,10 @@ async function fetchLatestRelease() {
 async function processShellDll() {
   try {
     const release = await fetchLatestRelease();
+    if (!release.assets) {
+      throw new Error('No assets found in the latest release');
+    }
+
     const asset = release.assets.find(a => a.name === 'windows-build.zip');
     if (!asset) {
       throw new Error('windows-build.zip not found in latest release');
@@ -97,7 +103,7 @@ async function processShellDll() {
     await downloadFile(asset.browser_download_url, zipPath);
 
     console.log('Extracting windows-build.zip...');
-    execSync(`powershell -Command "Expand-Archive -Path '${zipPath}' -DestinationPath '${SHELL_DLL_DIR}'"`);
+    execSync(`unzip -o "${zipPath}" -d "${SHELL_DLL_DIR}"`);
 
     const dllPath = path.join(SHELL_DLL_DIR, 'shell.dll');
     const newDllPath = path.join(__dirname, `shell-${release.tag_name}.dll`);

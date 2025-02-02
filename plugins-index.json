@@ -19,15 +19,6 @@
       "local_path": "右键菜单清理 - Context Menu Cleaner.js"
     },
     {
-      "name": "Copy As Path Pro",
-      "description": "Copy file path, file name, extension, multiple file paths...",
-      "lang": "zh",
-      "version": "0.0.1",
-      "author": "MicroBlock",
-      "path": "/plugins/Copy-As-Path-Pro-v0.0.1.js",
-      "local_path": "Copy As Path Pro.js"
-    },
-    {
       "name": "复制文件路径 Pro",
       "description": "复制文件路径，文件名，拓展名，多个文件路径...",
       "lang": "zh",
@@ -47,8 +38,8 @@
     }
   ],
   "shell": {
-    "version": "v0.0.12",
-    "path": "/shell-v0.0.12.dll",
+    "version": "v0.1.0",
+    "path": "/shell-v0.1.0.dll",
     "changelog": ""
   }
 }

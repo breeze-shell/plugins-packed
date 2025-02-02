@@ -42,7 +42,7 @@ shell.menu_controller.add_menu_listener(ctx => {
 
             for (const menu of ctx.menu.get_items()) {
                 const data = menu.data()
-                if(!data.name) continue;
+                if (!data.name) continue;
                 text(sub, data.name, sub => {
                     for (const key in data) {
                         let data_k = data[key]
@@ -69,7 +69,10 @@ shell.menu_controller.add_menu_listener(ctx => {
                                     return text
                                 }
 
-                                text(sub, preview_text(data[key]), null, null)
+                                button(sub, preview_text(data_k), () => {
+                                    shell.clipboard.set_text(data_k)
+                                    ctx.menu.close()
+                                }, null)
                             }
                         })
                     }

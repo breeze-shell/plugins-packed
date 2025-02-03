@@ -35,6 +35,15 @@
       "author": "Unknown",
       "path": "/plugins/Windows-11-Icon-Pack-v0.0.1.js",
       "local_path": "Windows 11 Icon Pack.js"
+    },
+    {
+      "name": "桌面右键配置 Breeze",
+      "description": "在桌面右键菜单添加“配置 Breeze”选项，点击后打开 Breeze 数据目录",
+      "lang": "zh",
+      "version": "0.0.1",
+      "author": "leafmoes",
+      "path": "/plugins/桌面右键配置-Breeze-v0.0.1.js",
+      "local_path": "桌面右键配置 Breeze.js"
     }
   ],
   "shell": {

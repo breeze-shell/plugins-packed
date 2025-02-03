@@ -47,8 +47,8 @@
     }
   ],
   "shell": {
-    "version": "0.1.1",
-    "path": "/shell-0.1.1.dll",
-    "changelog": "- fix: svg icon not reloaded when set from js side\r\n- fix: 在 JS 侧设置 SVG 图标时不正确重载"
+    "version": "0.1.2",
+    "path": "/shell-0.1.2.dll",
+    "changelog": ""
   }
 }

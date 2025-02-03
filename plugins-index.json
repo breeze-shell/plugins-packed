@@ -13,9 +13,9 @@
       "name": "右键菜单清理 - Context Menu Cleaner",
       "description": "多功能、可配置的右键菜单清理工具 / A versatile and configurable context menu cleaner",
       "lang": "zh",
-      "version": "0.0.3",
+      "version": "0.0.4",
       "author": "MicroBlock",
-      "path": "/plugins/右键菜单清理-Context-Menu-Cleaner-v0.0.3.js",
+      "path": "/plugins/右键菜单清理-Context-Menu-Cleaner-v0.0.4.js",
       "local_path": "右键菜单清理 - Context Menu Cleaner.js"
     },
     {
@@ -47,8 +47,8 @@
     }
   ],
   "shell": {
-    "version": "0.1.2",
-    "path": "/shell-0.1.2.dll",
-    "changelog": ""
+    "version": "0.1.3",
+    "path": "/shell-0.1.3.dll",
+    "changelog": "- **修复黑屏问题 （#1）**\r\n- 将 inject 重命名为 breeze 以躲避反作弊检查\r\n- 新增插件源：Enlysure 上海\r\n- 修复插件商店不能正常显示插件描述\r\n- 插件商店缓存 index\r\n- 在崩溃前等待五秒\r\n- 在过长时允许滚动\r\n- 增加子子菜单 API\r\n- 修复很多崩溃\r\n"
   }
 }

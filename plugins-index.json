@@ -56,8 +56,8 @@
     }
   ],
   "shell": {
-    "version": "0.1.4",
-    "path": "/shell-0.1.4.dll",
-    "changelog": "- 修复非透明背景不工作的问题"
+    "version": "0.1.5",
+    "path": "/shell-0.1.5.dll",
+    "changelog": "修复右键菜单上下文缺失问题"
   }
 }

@@ -13,9 +13,9 @@
       "name": "常用功能小图标 - Copy paste etc. in one line",
       "description": "将复制，剪切等常用功能按钮添加到右键菜单的第一行小图标",
       "lang": "zh",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "author": "MicroBlock",
-      "path": "/plugins/常用功能小图标-Copy-paste-etc-in-one-line-v0.0.1.js",
+      "path": "/plugins/常用功能小图标-Copy-paste-etc-in-one-line-v0.0.2.js",
       "local_path": "常用功能小图标 - Copy paste etc. in one line.js"
     },
     {
@@ -65,8 +65,8 @@
     }
   ],
   "shell": {
-    "version": "0.1.7",
-    "path": "/shell-0.1.7.dll",
-    "changelog": "- 切换到 clang-cl\r\n- 注入器添加还原按钮\r\n- 重构获取 IShellBrowser 的方式以减少崩溃和增加上下文可用范围\r\n- JS API 新增 windows 属性\r\n- 不再替换 owner draw menus\r\n- JS API 切换到 W 系列 API 防止中文乱码\r\n- 显示时不获取焦点，并置顶\r\n- 修复菜单项布局问题\r\n- 修复某些按钮的已勾选不显示勾勾\r\n- 正确处理系统异步子菜单（WM_INITMENUPOPUP）\r\n- 手动添加 NVIDIA 图标"
+    "version": "0.1.8",
+    "path": "/shell-0.1.8.dll",
+    "changelog": "- 再次修复 NVIDIA 图标\r\n- 如果往上展开则默认反转菜单顺序\r\n- JS 新增几个 API 快捷方式\r\n- 修复主菜单滚动定位\r\n- 修复 menu_item_parent_widget 出现动画"
   }
 }

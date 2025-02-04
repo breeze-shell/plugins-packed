@@ -4,9 +4,9 @@
       "name": "MenuInspector",
       "description": "(开发工具) 显示当前右键菜单相关信息",
       "lang": "zh",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "author": "MicroBlock",
-      "path": "/plugins/MenuInspector-v0.0.1.js",
+      "path": "/plugins/MenuInspector-v0.0.2.js",
       "local_path": "MenuInspector.js"
     },
     {

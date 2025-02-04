@@ -56,8 +56,8 @@
     }
   ],
   "shell": {
-    "version": "0.1.6",
-    "path": "/shell-0.1.6.dll",
-    "changelog": "各种bug修复"
+    "version": "0.1.7",
+    "path": "/shell-0.1.7.dll",
+    "changelog": "- 切换到 clang-cl\r\n- 注入器添加还原按钮\r\n- 重构获取 IShellBrowser 的方式以减少崩溃和增加上下文可用范围\r\n- JS API 新增 windows 属性\r\n- 不再替换 owner draw menus\r\n- JS API 切换到 W 系列 API 防止中文乱码\r\n- 显示时不获取焦点，并置顶\r\n- 修复菜单项布局问题\r\n- 修复某些按钮的已勾选不显示勾勾\r\n- 正确处理系统异步子菜单（WM_INITMENUPOPUP）\r\n- 手动添加 NVIDIA 图标"
   }
 }

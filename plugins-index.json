@@ -10,6 +10,15 @@
       "local_path": "MenuInspector.js"
     },
     {
+      "name": "常用功能小图标 - Copy paste etc. in one line",
+      "description": "将复制，剪切等常用功能按钮添加到右键菜单的第一行小图标",
+      "lang": "zh",
+      "version": "0.0.1",
+      "author": "MicroBlock",
+      "path": "/plugins/常用功能小图标-Copy-paste-etc-in-one-line-v0.0.1.js",
+      "local_path": "常用功能小图标 - Copy paste etc. in one line.js"
+    },
+    {
       "name": "右键菜单清理 - Context Menu Cleaner",
       "description": "多功能、可配置的右键菜单清理工具 / A versatile and configurable context menu cleaner",
       "lang": "zh",

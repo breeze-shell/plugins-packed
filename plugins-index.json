@@ -13,9 +13,9 @@
       "name": "常用功能小图标 - Copy paste etc. in one line",
       "description": "将复制，剪切等常用功能按钮添加到右键菜单的第一行小图标",
       "lang": "zh",
-      "version": "0.0.2",
+      "version": "0.0.3",
       "author": "MicroBlock",
-      "path": "/plugins/常用功能小图标-Copy-paste-etc-in-one-line-v0.0.2.js",
+      "path": "/plugins/常用功能小图标-Copy-paste-etc-in-one-line-v0.0.3.js",
       "local_path": "常用功能小图标 - Copy paste etc. in one line.js"
     },
     {

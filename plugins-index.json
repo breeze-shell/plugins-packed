@@ -74,8 +74,8 @@
     }
   ],
   "shell": {
-    "version": "0.1.8",
-    "path": "/shell-0.1.8.dll",
-    "changelog": "- 再次修复 NVIDIA 图标\r\n- 如果往上展开则默认反转菜单顺序\r\n- JS 新增几个 API 快捷方式\r\n- 修复主菜单滚动定位\r\n- 修复 menu_item_parent_widget 出现动画"
+    "version": "0.1.9",
+    "path": "/shell-0.1.9.dll",
+    "changelog": "- 新增点击显示和隐藏子菜单的功能（当没有 action 时）  \r\n- 将最新的崩溃报告转储到文件中  \r\n- 新增JavaScript `ShellExecuteW` API  \r\n- 修复在高DPI环境下滚动失效的问题  \r\n- 修复JS Edit 控件上下文的问题  \r\n- 修复桌面文件夹视图的上下文问题  \r\n- 修复动画问题  \r\n- 修复注入模块的恢复按钮问题  \r\n- 按下Alt键时关闭\r\n- 修复Shell隐藏时崩溃的问题\r\n- 调整亚克力颜色配置，新增浅色和深色配置项，保留旧版透明度配置以兼容旧版本"
   }
 }

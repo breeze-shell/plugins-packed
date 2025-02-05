@@ -62,6 +62,15 @@
       "author": "leafmoes",
       "path": "/plugins/桌面右键配置-Breeze-v0.0.2.js",
       "local_path": "桌面右键配置 Breeze.js"
+    },
+    {
+      "name": "链接详情显示",
+      "description": "显示当前选中文件(夹)的链接详情（支持软链接、硬链接、符号链接）。点击路径可以直接复制。",
+      "lang": "zh",
+      "version": "0.0.1",
+      "author": "NahidaBuer",
+      "path": "/plugins/链接详情显示-v0.0.1.js",
+      "local_path": "链接详情显示.js"
     }
   ],
   "shell": {

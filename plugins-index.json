@@ -22,9 +22,9 @@
       "name": "右键菜单清理 - Context Menu Cleaner",
       "description": "多功能、可配置的右键菜单清理工具 / A versatile and configurable context menu cleaner",
       "lang": "zh",
-      "version": "0.0.5",
+      "version": "0.0.7",
       "author": "MicroBlock",
-      "path": "/plugins/右键菜单清理-Context-Menu-Cleaner-v0.0.5.js",
+      "path": "/plugins/右键菜单清理-Context-Menu-Cleaner-v0.0.7.js",
       "local_path": "右键菜单清理 - Context Menu Cleaner.js"
     },
     {

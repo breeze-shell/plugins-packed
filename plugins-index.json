@@ -49,9 +49,9 @@
       "name": "Windows 11 Icon Pack",
       "description": "给右键菜单换上 Windows 11 风格的图标 / Change the right-click menu to Windows 11 style icons",
       "lang": "zh",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "author": "Unknown",
-      "path": "/plugins/Windows-11-Icon-Pack-v0.0.1.js",
+      "path": "/plugins/Windows-11-Icon-Pack-v0.0.2.js",
       "local_path": "Windows 11 Icon Pack.js"
     },
     {

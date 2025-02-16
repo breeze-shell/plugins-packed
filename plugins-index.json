@@ -83,8 +83,8 @@
     }
   ],
   "shell": {
-    "version": "0.1.11",
-    "path": "/shell-0.1.11.dll",
-    "changelog": "- 修复一些多线程问题，制造了更多多线程问题\r\n- 修复 NVIDIA 图标\r\n- 修复上一次菜单有残留的问题\r\n- 修复在高分屏上菜单定位的问题"
+    "version": "0.1.12",
+    "path": "/shell-0.1.12.dll",
+    "changelog": "- 修复重载插件时死锁\r\n- 修复一堆导致崩溃的问题\r\n- 移除 QuickJS libc 以避免崩溃\r\n- 实验性触屏支持\r\n- 不向带有 TPM_NONOTIFY 的窗口发送 WM_COMMAND"
   }
 }

@@ -22,27 +22,27 @@
       "name": "常用功能小图标 - Copy paste etc. in one line",
       "description": "将复制，剪切等常用功能按钮添加到右键菜单的第一行小图标",
       "lang": "zh",
-      "version": "0.0.3",
+      "version": "0.0.4",
       "author": "MicroBlock",
-      "path": "/plugins/常用功能小图标-Copy-paste-etc-in-one-line-v0.0.3.js",
+      "path": "/plugins/常用功能小图标-Copy-paste-etc-in-one-line-v0.0.4.js",
       "local_path": "常用功能小图标 - Copy paste etc. in one line.js"
     },
     {
       "name": "右键菜单清理 - Context Menu Cleaner",
       "description": "多功能、可配置的右键菜单清理工具 / A versatile and configurable context menu cleaner",
       "lang": "zh",
-      "version": "0.0.9",
+      "version": "0.0.10",
       "author": "MicroBlock",
-      "path": "/plugins/右键菜单清理-Context-Menu-Cleaner-v0.0.9.js",
+      "path": "/plugins/右键菜单清理-Context-Menu-Cleaner-v0.0.10.js",
       "local_path": "右键菜单清理 - Context Menu Cleaner.js"
     },
     {
       "name": "复制文件路径 Pro",
       "description": "复制文件路径，文件名，拓展名，多个文件路径...",
       "lang": "zh",
-      "version": "0.0.1",
+      "version": "0.0.2",
       "author": "MicroBlock",
-      "path": "/plugins/复制文件路径-Pro-v0.0.1.js",
+      "path": "/plugins/复制文件路径-Pro-v0.0.2.js",
       "local_path": "复制文件路径 Pro.js"
     },
     {
@@ -83,8 +83,8 @@
     }
   ],
   "shell": {
-    "version": "0.1.12",
-    "path": "/shell-0.1.12.dll",
-    "changelog": "- 修复重载插件时死锁\r\n- 修复一堆导致崩溃的问题\r\n- 移除 QuickJS libc 以避免崩溃\r\n- 实验性触屏支持\r\n- 不向带有 TPM_NONOTIFY 的窗口发送 WM_COMMAND"
+    "version": "0.1.13",
+    "path": "/shell-0.1.13.dll",
+    "changelog": "### 中文\r\n- 重构切换到 Win10 右键菜单的方式（有点问题，会导致桌面上显示 Win11 菜单）\r\n- 更多动画相关配置，动画默认配置\r\n- 修复 quickjspp 死锁\r\n- 注入器支持英文\r\n\r\n### English\r\n- Refactored the way to switch to the Win10 right-click menu\r\n- More animation-related configurations, animation default configurations\r\n- Fixed quickjspp deadlock\r\n- Injector supports English now"
   }
 }

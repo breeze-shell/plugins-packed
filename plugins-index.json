@@ -83,8 +83,8 @@
     }
   ],
   "shell": {
-    "version": "0.1.13",
-    "path": "/shell-0.1.13.dll",
-    "changelog": "### 中文\r\n- 重构切换到 Win10 右键菜单的方式（有点问题，会导致桌面上显示 Win11 菜单）\r\n- 更多动画相关配置，动画默认配置\r\n- 修复 quickjspp 死锁\r\n- 注入器支持英文\r\n\r\n### English\r\n- Refactored the way to switch to the Win10 right-click menu\r\n- More animation-related configurations, animation default configurations\r\n- Fixed quickjspp deadlock\r\n- Injector supports English now"
+    "version": "0.1.14",
+    "path": "/shell-0.1.14.dll",
+    "changelog": "### 中文\r\n- 修复 JS 在某些机器上崩溃的问题  \r\n- 为 QuickJS 构建调试信息以方便调试  \r\n- 发布时使用 releasedbg 编译  \r\n- 修复显示 Windows 11 右键菜单的问题  \r\n\r\n### English\r\n- Fixed an issue where JS crashes on certain machines  \r\n- Added debug information for QuickJS to facilitate debugging  \r\n- Use releasedbg compilation for releases  \r\n- Fixed an issue causing displaying the Windows 11 context menu"
   }
 }

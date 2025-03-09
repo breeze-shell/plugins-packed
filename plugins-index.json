@@ -83,8 +83,8 @@
     }
   ],
   "shell": {
-    "version": "0.1.14",
-    "path": "/shell-0.1.14.dll",
-    "changelog": "### 中文\r\n- 修复 JS 在某些机器上崩溃的问题  \r\n- 为 QuickJS 构建调试信息以方便调试  \r\n- 发布时使用 releasedbg 编译  \r\n- 修复显示 Windows 11 右键菜单的问题  \r\n\r\n### English\r\n- Fixed an issue where JS crashes on certain machines  \r\n- Added debug information for QuickJS to facilitate debugging  \r\n- Use releasedbg compilation for releases  \r\n- Fixed an issue causing displaying the Windows 11 context menu"
+    "version": "0.1.15",
+    "path": "/shell-0.1.15.dll",
+    "changelog": "### 中文\r\n- ci: 在 Release 构建中删除调试信息\r\n- fix: 为 NtUserTrackHook 使用精确类型\r\n- fix: 更好的 Win11 右键菜单补丁定位方式\r\n- refactor: 使用自己的调用栈获取实现\r\n- fix: 在主线程执行改变大小事件\r\n- fix: 在改变大小后清除一次窗口内容\r\n- refactor: 不再在其它线程执行 JS 相关代码，改善多线程问题\r\n- chore: 关闭 quickjs 的 pdb 生成\r\n- feat: 实现一些 JavaScript API\r\n  - `fs.isdir` #143  @leafmoes\r\n  - `win32.load_file_icon`\r\n  - `infra.atob` `infra.btoa`\r\n  - `copy_shfile` `move_shfile`\r\n  - `folder_view.select` 等\r\n- fix: 使 submenu 添加函数阻塞执行\r\n- fix: 在主线程上执行刷新操作\r\n- fix: 修复一些崩溃问题\r\n\r\n### English\r\n- ci: Remove debug information in Release builds\r\n- fix: Use precise types for NtUserTrackHook\r\n- fix: Better positioning method for Win11 right-click menu patch\r\n- refactor: Use our own implementation for call stack retrieval\r\n- fix: Execute resize events on the main thread\r\n- fix: Clear window content once after resizing\r\n- refactor: No longer execute JS-related code on other threads to improve multi-threading issues\r\n- chore: Disable pdb generation for quickjs\r\n- feat: Implement some JavaScript APIs\r\n  - `fs.isdir`\r\n  - `win32.load_file_icon`\r\n  - `infra.atob` `infra.btoa`\r\n  - `copy_shfile` `move_shfile`\r\n  - `folder_view.select`, etc.\r\n- fix: Make submenu add function block execution\r\n- fix: Execute refresh operations on the main thread\r\n- fix: Fix some crash issues"
   }
 }

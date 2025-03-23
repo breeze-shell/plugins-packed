@@ -10,6 +10,15 @@
       "local_path": "MenuInspector.js"
     },
     {
+      "name": "New+",
+      "description": "根据模板创建文件/文件夹",
+      "lang": "zh",
+      "version": "1.0.1",
+      "author": "leafmoes",
+      "path": "/plugins/New--v1.0.1.js",
+      "local_path": "New+.js"
+    },
+    {
       "name": "better-terminal",
       "description": "增加管理员方式打开终端",
       "lang": "zh",

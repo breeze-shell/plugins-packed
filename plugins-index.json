@@ -73,6 +73,15 @@
       "local_path": "Windows 11 Icon Pack.js"
     },
     {
+      "name": "插件图标主题色",
+      "description": "让部分插件添加的图标染上系统主题色 / Colorize icons added by other plugins with accent color",
+      "lang": "zh",
+      "version": "0.0.1",
+      "author": "Lukoning",
+      "path": "/plugins/插件图标主题色-v0.0.1.js",
+      "local_path": "插件图标主题色.js"
+    },
+    {
       "name": "桌面右键配置 Breeze",
       "description": "在桌面右键菜单添加“配置 Breeze”选项，点击后打开 Breeze 数据目录",
       "lang": "zh",

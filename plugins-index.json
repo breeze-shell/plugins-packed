@@ -76,9 +76,9 @@
       "name": "插件图标主题色",
       "description": "让部分插件添加的图标染上系统主题色 / Colorize icons added by other plugins with accent color",
       "lang": "zh",
-      "version": "0.0.2",
+      "version": "0.0.3",
       "author": "Lukoning",
-      "path": "/plugins/插件图标主题色-v0.0.2.js",
+      "path": "/plugins/插件图标主题色-v0.0.3.js",
       "local_path": "插件图标主题色.js"
     },
     {

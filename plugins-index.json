@@ -101,8 +101,8 @@
     }
   ],
   "shell": {
-    "version": "0.1.20",
-    "path": "/shell-0.1.20.dll",
-    "changelog": "#### 中文\r\n- feat(js): 新增 `is_key_down` 及注册相关API  \r\n- fix(shell): 为日志记录器添加互斥锁  \r\n- fix(shell): 搜索时检查是否存在活动shell视图 (部分解决 #170)   \r\n- fix(shell): Win11菜单补丁导致隐藏/扩展菜单异常显示问题 (#173)  \r\n- feat(ui): 实验性触屏支持  \r\n\r\n#### English\r\n- feat(js): add `is_key_down` and register apis\r\n- fix(shell): add mutex to logger\r\n- fix(shell): check if has active shell view when searching (partially #170)\r\n- fix(js): also enable clear rubbish bin by name\r\n- fix(shell): win11 menu patch causes the hidden/extended menu to show up(#173)\r\n- feat(ui): experimental touchscreen support"
+    "version": "0.1.21",
+    "path": "/shell-0.1.21.dll",
+    "changelog": "#### English\r\n- feat(shell): make experimental ownerdraw support optional (#190 #187)\r\n- fix(shell): create config dir automatically (#170)\r\n- fix(shell): improve menu construction performance (#153)\r\n- feat(js): notification apis\r\n- fix(shell): reinstall window proc hook\r\n- fix(shell): improve touchscreen support\r\n- feat(shell): scrollbar\r\n- fix(shell): submenu location with scroll\r\n- refactor(js): makeBreezeConfigMenu\r\n\r\n#### 中文  \r\n- feat(shell)：将实验性的自主绘制支持改为可选功能 (#190 #187)  \r\n- fix(shell)：自动创建配置目录 (#170) ，修复没有 Breeze 配置菜单的问题\r\n- fix(shell)：优化菜单构建性能 (#153)  \r\n- feat(js)：通知相关API\r\n- fix(shell)：重新安装窗口过程钩子  \r\n- fix(shell)：增强触屏支持\r\n- feat(shell)：滚动菜单实现滚动条\r\n- fix(shell)：带滚动功能的子菜单位置修正  \r\n- refactor(js)：提取出 makeBreezeConfigMenu\r\n"
   }
 }

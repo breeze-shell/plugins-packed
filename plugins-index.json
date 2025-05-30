@@ -101,8 +101,8 @@
     }
   ],
   "shell": {
-    "version": "0.1.22",
-    "path": "/shell-0.1.22.dll",
-    "changelog": "- fix(shell): fix crash\r\n- 修复某处崩溃\r\n\r\n#### 请尽快更新到此版本！\r\n#### Please update to this version ASAP!\r\n\r\n若已经出现崩溃，请 `Ctrl+Shift+Esc` 调出任务管理器，杀死 `breeze.exe` 进程，然后使用任务管理器的 “运行新任务” 运行 `explorer.exe`。在此之后，下载此版本并替换 `shell.dll`。\r\n\r\nIf a crash has already occurred, press `Ctrl+Shift+Esc` to bring up the Task Manager, kill the `breeze.exe` process, and then use the \"Run new task\" option in the Task Manager to run `explorer.exe`. After that, download this version and replace `shell.dll`.\r\n\r\n突然被 Windows 更新创烂了 (┬┬﹏┬┬)\r\nGot wrecked by a Windows update out of nowhere (┬┬﹏┬┬)"
+    "version": "0.1.23",
+    "path": "/shell-0.1.23.dll",
+    "changelog": "<img height=300 src=https://github.com/user-attachments/assets/e9ab080d-26a2-4d71-b139-31062d79101c />\r\n<img height=300 src=https://github.com/user-attachments/assets/bbd42241-8547-43bd-9364-77fdf65475de />\r\n\r\n\r\n## 中文  \r\n- feat(shell): 改用cpptrace处理异常  \r\n- feat(shell): 恢复旧版Win11菜单补丁方法（使用try catch）(#196)  \r\n- feat(injector): 若崩溃3次则停止注入  \r\n- feat(injector): 类WinUI3风格��钮  \r\n- feat(shell): 支持自绘边框与阴影 \r\n- refactor(ui): 优化 UI 框架代码\r\n\r\n## English\r\n- feat(shell): use cpptrace for exception handler instead\r\n- feat(shell): restore old win11 menu patch method with try catch (#196)\r\n- feat(injector): stop injecting if crashed 3 times\r\n- feat(injector): winui3-like buttons\r\n- feat(shell): self drawn border & shadow"
   }
 }

@@ -1,6 +1,15 @@
 {
   "plugins": [
     {
+      "name": "常用功能小图标 - Copy paste etc. in one line",
+      "description": "将复制，剪切等常用功能按钮添加到右键菜单的第一行小图标",
+      "lang": "zh",
+      "version": "0.0.4",
+      "author": "MicroBlock",
+      "path": "/plugins/常用功能小图标-Copy-paste-etc-in-one-line-v0.0.4.js",
+      "local_path": "常用功能小图标 - Copy paste etc. in one line.js"
+    },
+    {
       "name": "MenuInspector",
       "description": "(开发工具) 显示当前右键菜单相关信息",
       "lang": "zh",
@@ -17,6 +26,15 @@
       "author": "leafmoes",
       "path": "/plugins/New--v1.0.1.js",
       "local_path": "New+.js"
+    },
+    {
+      "name": "Windows 11 Icon Pack",
+      "description": "给右键菜单换上 Windows 11 风格的图标 / Change the right-click menu to Windows 11 style icons",
+      "lang": "zh",
+      "version": "0.0.2",
+      "author": "Unknown",
+      "path": "/plugins/Windows-11-Icon-Pack-v0.0.2.js",
+      "local_path": "Windows 11 Icon Pack.js"
     },
     {
       "name": "better-terminal",
@@ -103,6 +121,6 @@
   "shell": {
     "version": "0.1.23",
     "path": "/shell-0.1.23.dll",
-    "changelog": "<img height=300 src=https://github.com/user-attachments/assets/e9ab080d-26a2-4d71-b139-31062d79101c />\r\n<img height=300 src=https://github.com/user-attachments/assets/bbd42241-8547-43bd-9364-77fdf65475de />\r\n\r\n\r\n## 中文  \r\n- feat(shell): 改用cpptrace处理异常  \r\n- feat(shell): 恢复旧版Win11菜单补丁方法（使用try catch）(#196)  \r\n- feat(injector): 若崩溃3次则停止注入  \r\n- feat(injector): 类WinUI3��格按钮  \r\n- feat(shell): 支持自绘边框与阴影 \r\n- refactor(ui): 优化 UI 框架代码\r\n\r\n## English\r\n- feat(shell): use cpptrace for exception handler instead\r\n- feat(shell): restore old win11 menu patch method with try catch (#196)\r\n- feat(injector): stop injecting if crashed 3 times\r\n- feat(injector): winui3-like buttons\r\n- feat(shell): self drawn border & shadow"
+    "changelog": "<img height=300 src=https://github.com/user-attachments/assets/e9ab080d-26a2-4d71-b139-31062d79101c />\r\n<img height=300 src=https://github.com/user-attachments/assets/bbd42241-8547-43bd-9364-77fdf65475de />\r\n\r\n\r\n## 中文  \r\n- feat(shell): 改用cpptrace处理异常  \r\n- feat(shell): 恢复旧版Win11菜单补丁方法（使用try catch）(#196)  \r\n- feat(injector): 若崩溃3次则停止注入  \r\n- feat(injector): 类WinUI3风格按钮  \r\n- feat(shell): 支持自绘边框与阴影 \r\n- refactor(ui): 优化 UI 框架代码\r\n\r\n## English\r\n- feat(shell): use cpptrace for exception handler instead\r\n- feat(shell): restore old win11 menu patch method with try catch (#196)\r\n- feat(injector): stop injecting if crashed 3 times\r\n- feat(injector): winui3-like buttons\r\n- feat(shell): self drawn border & shadow"
   }
 }

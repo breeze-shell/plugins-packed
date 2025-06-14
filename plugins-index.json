@@ -28,15 +28,6 @@
       "local_path": "New+.js"
     },
     {
-      "name": "Windows 11 Icon Pack",
-      "description": "给右键菜单换上 Windows 11 风格的图标 / Change the right-click menu to Windows 11 style icons",
-      "lang": "zh",
-      "version": "0.0.2",
-      "author": "Unknown",
-      "path": "/plugins/Windows-11-Icon-Pack-v0.0.2.js",
-      "local_path": "Windows 11 Icon Pack.js"
-    },
-    {
       "name": "better-terminal",
       "description": "增加管理员方式打开终端",
       "lang": "zh",
@@ -85,9 +76,9 @@
       "name": "Windows 11 Icon Pack",
       "description": "给右键菜单换上 Windows 11 风格的图标 / Change the right-click menu to Windows 11 style icons",
       "lang": "zh",
-      "version": "0.0.2",
+      "version": "0.0.3",
       "author": "Unknown",
-      "path": "/plugins/Windows-11-Icon-Pack-v0.0.2.js",
+      "path": "/plugins/Windows-11-Icon-Pack-v0.0.3.js",
       "local_path": "Windows 11 Icon Pack.js"
     },
     {
@@ -119,8 +110,8 @@
     }
   ],
   "shell": {
-    "version": "0.1.23",
-    "path": "/shell-0.1.23.dll",
-    "changelog": "<img height=300 src=https://github.com/user-attachments/assets/e9ab080d-26a2-4d71-b139-31062d79101c />\r\n<img height=300 src=https://github.com/user-attachments/assets/bbd42241-8547-43bd-9364-77fdf65475de />\r\n\r\n\r\n## 中文  \r\n- feat(shell): 改用cpptrace处理异常  \r\n- feat(shell): 恢复旧版Win11菜单补丁方法（使用try catch）(#196)  \r\n- feat(injector): 若崩溃3次则停止注入  \r\n- feat(injector): 类WinUI3��格按钮  \r\n- feat(shell): 支持自绘边框与阴影 \r\n- refactor(ui): 优化 UI 框架代码\r\n\r\n## English\r\n- feat(shell): use cpptrace for exception handler instead\r\n- feat(shell): restore old win11 menu patch method with try catch (#196)\r\n- feat(injector): stop injecting if crashed 3 times\r\n- feat(injector): winui3-like buttons\r\n- feat(shell): self drawn border & shadow"
+    "version": "0.1.26",
+    "path": "/shell-0.1.26.dll",
+    "changelog": "上一版因为[上游 break](https://github.com/xmake-io/xmake-repo/commit/a63907243cb96c4cc5f11a64babd20099c9f527f)，CI 挂掉了，重发一下\r\n\r\n### 中文\r\n- feat(injector): 不再在注入前重启资源管理器\r\n- fix(ui): 亚克力背景大小与组件大小不同步\r\n- feat(bindgen, js, qjspp): 支持嵌套类型，非限定名查找，继承，tuple\r\n- feat(js): 自定义组件\r\n- fix(shell): 修复某些系统版本上的不优先弹出 Breeze 菜单的问题 (#196)\r\n- fix(js): 在 setTimeout callback 内 setTimeout 导致崩溃\r\n- refactor(bindgen): 使用 clang 提供的 comment ast 来生成注释\r\n- refactor(bindgen): 将 JavaScript 运行时，bindgen 分别移动至单独的项目（ https://github.com/breeze-shell/breeze-js-bindgen / https://github.com/breeze-shell/breeze-js ）\r\n- feat(shell): 更新 resid 查找方式，支持从菜单类型的资源中查找 resid\r\n\r\n### English  \r\n- feat(injector): No longer restarts the resource manager before injection  \r\n- fix(ui): Acrylic background size not syncing with component size  \r\n- feat(bindgen, js, qjspp): Support for nested types, unqualified name lookup, inheritance, and tuples  \r\n- feat(js): Custom components  \r\n- fix(shell): Fixed issue where the Breeze menu did not prioritize popping up on certain system versions (#196)  \r\n- fix(js): Crash caused by calling `setTimeout` inside a `setTimeout` callback  \r\n- refactor(bindgen): Use Clang's comment AST to generate documentation  \r\n- refactor(bindgen): Move the JavaScript runtime and bindgen to separate projects (https://github.com/breeze-shell/breeze-js-bindgen / https://github.com/breeze-shell/breeze-js)  \r\n- feat(shell): Updated RESID lookup method to support finding RESID from menu-type resources"
   }
 }

@@ -1,15 +1,6 @@
 {
   "plugins": [
     {
-      "name": "常用功能小图标 - Copy paste etc. in one line",
-      "description": "将复制，剪切等常用功能按钮添加到右键菜单的第一行小图标",
-      "lang": "zh",
-      "version": "0.0.4",
-      "author": "MicroBlock",
-      "path": "/plugins/常用功能小图标-Copy-paste-etc-in-one-line-v0.0.4.js",
-      "local_path": "常用功能小图标 - Copy paste etc. in one line.js"
-    },
-    {
       "name": "MenuInspector",
       "description": "(开发工具) 显示当前右键菜单相关信息",
       "lang": "zh",
@@ -76,9 +67,9 @@
       "name": "Windows 11 Icon Pack",
       "description": "给右键菜单换上 Windows 11 风格的图标 / Change the right-click menu to Windows 11 style icons",
       "lang": "zh",
-      "version": "0.0.3",
+      "version": "0.0.4",
       "author": "Unknown",
-      "path": "/plugins/Windows-11-Icon-Pack-v0.0.3.js",
+      "path": "/plugins/Windows-11-Icon-Pack-v0.0.4.js",
       "local_path": "Windows 11 Icon Pack.js"
     },
     {
@@ -110,8 +101,8 @@
     }
   ],
   "shell": {
-    "version": "0.1.27",
-    "path": "/shell-0.1.27.dll",
-    "changelog": ""
+    "version": "0.1.30",
+    "path": "/shell-0.1.30.dll",
+    "changelog": "#### 中文\r\n- fix(shell): 避免激活窗口 (#254)\r\n#### English\r\n- fix(shell): prevent activating the window (#254)"
   }
 }

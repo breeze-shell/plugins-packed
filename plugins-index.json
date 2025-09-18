@@ -19,6 +19,15 @@
       "local_path": "New+.js"
     },
     {
+      "name": "Windows 11 Icon Pack (Ru - En)",
+      "description": "Добавляет иконки для контекстного меню как в Windows 11 / Change the right-click menu to Windows 11 style icons",
+      "lang": "zh",
+      "version": "1.0.0",
+      "author": "Glaz_almaz",
+      "path": "/plugins/Windows-11-Icon-Pack-Ru-En--v1.0.0.js",
+      "local_path": "Windows 11 Icon Pack (Ru - En).js"
+    },
+    {
       "name": "better-terminal",
       "description": "增加管理员方式打开终端",
       "lang": "zh",

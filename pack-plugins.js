@@ -1,12 +1,18 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+const crypto = require('crypto');
 const https = require('https');
 
 const PLUGINS_SRC = path.join('source', 'plugins');
 const PLUGINS_DEST = path.join('dist', 'plugins');
 const INDEX_FILE = path.join('dist', 'plugins-index.json');
 const SHELL_DLL_DIR = path.join(__dirname, 'shell');
+
+function sha256File(filePath) {
+  const content = fs.readFileSync(filePath);
+  return crypto.createHash('sha256').update(content).digest('hex');
+}
 
 function parseMetadata(filePath) {
   const content = fs.readFileSync(filePath, 'utf8');
@@ -132,14 +138,26 @@ async function processShellDll() {
     execSync(`unzip -o "${zipPath}" -d "${SHELL_DLL_DIR}"`);
 
     const dllPath = path.join(SHELL_DLL_DIR, 'x64/releasedbg/shell.dll');
+    const exePath = path.join(SHELL_DLL_DIR, 'x64/releasedbg/breeze.exe');
     const newDllPath = path.join(__dirname, `shell-${release.tag_name}.dll`);
+    const newExePath = path.join(__dirname, `breeze-${release.tag_name}.exe`);
     fs.renameSync(dllPath, newDllPath);
+    fs.renameSync(exePath, newExePath);
 
     console.log(`Shell DLL renamed to shell-${release.tag_name}.dll`);
+    console.log(`Injector exe renamed to breeze-${release.tag_name}.exe`);
 
     return {
       version: release.tag_name,
       path: `/shell-${release.tag_name}.dll`,
+      sha256: sha256File(newDllPath),
+      size: fs.statSync(newDllPath).size,
+      injector: {
+        version: release.tag_name,
+        path: `/breeze-${release.tag_name}.exe`,
+        sha256: sha256File(newExePath),
+        size: fs.statSync(newExePath).size
+      },
       changelog: release.body || ''
     };
   } catch (error) {
@@ -189,8 +207,11 @@ async function processPlugins() {
       shell: {
         version: shellInfo.version,
         path: shellInfo.path,
+        sha256: shellInfo.sha256,
+        size: shellInfo.size,
         changelog: shellInfo.changelog
-      }
+      },
+      injector: shellInfo.injector
     };
 
     fs.writeFileSync(
